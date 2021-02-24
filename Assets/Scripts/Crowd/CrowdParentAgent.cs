@@ -14,6 +14,7 @@ public class CrowdParentAgent : MonoBehaviour
         GameObject parent = this.transform.gameObject;
         for(int i = 0; i < numSoldiers; i++)
         {
+            // Instantiate numSoldiers (i.e. 20) number of Soldiers within a random area near our transform position
             allSoldiers[i] = (GameObject)Instantiate(soldier, parent.transform.position, Quaternion.identity);
             allSoldiers[i].transform.position = allSoldiers[i].transform.position + (Vector3) Random.insideUnitCircle * 2;
         }

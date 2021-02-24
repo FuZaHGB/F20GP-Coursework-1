@@ -87,6 +87,8 @@ public class DestroyableObject : AttackCollisionTrigger
             setColliderState(true);
             applyExplosionForce();
 
+            GetComponentInParent<Score>().IncrementScore();
+
             isDestroyed = true;
         }
 

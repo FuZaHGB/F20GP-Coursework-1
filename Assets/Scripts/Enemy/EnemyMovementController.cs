@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Text.RegularExpressions;
+using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyMovementController : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class EnemyMovementController : MonoBehaviour
     public GameObject agentGunBarrel;
     private GameObject muzzleflash;
     private float attackDelay = 0f;
+
+    public Text score;
 
     // Start is called before the first frame update
     void Start()
