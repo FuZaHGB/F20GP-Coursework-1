@@ -10,24 +10,24 @@ public class LightFade : MonoBehaviour
     public float delay;
     public bool startAtMin;
 
-    private Light myLight;
+    private Light barLight;
 
     private float timeElapsed;
 
     private void Awake()
     {
-        myLight = this.GetComponentInChildren<Light>();
+        barLight = this.GetComponentInChildren<Light>();
 
-        if (myLight != null)
+        if (barLight != null)
         {
-            myLight.intensity = startAtMin ? minIntensity : maxIntensity;
-            myLight.color = UnityEngine.Color.red;
+            barLight.intensity = startAtMin ? minIntensity : maxIntensity;
+            barLight.color = UnityEngine.Color.red;
         }
     }
 
     private void Update()
     {
-        if (myLight != null)
+        if (barLight != null)
         {
             timeElapsed += Time.deltaTime;
 
@@ -41,16 +41,16 @@ public class LightFade : MonoBehaviour
 
     private void ToggleLight()
     {
-        if (myLight != null)
+        if (barLight != null)
         {
-            if (myLight.intensity == minIntensity)
+            if (barLight.intensity == minIntensity)
             {
-                myLight.intensity = maxIntensity;
+                barLight.intensity = maxIntensity;
             }
 
-            else if (myLight.intensity == maxIntensity)
+            else if (barLight.intensity == maxIntensity)
             {
-                myLight.intensity = minIntensity;
+                barLight.intensity = minIntensity;
             }
         }
     }
