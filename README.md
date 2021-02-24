@@ -2,6 +2,8 @@ This is my submission for Coursework 1.
 
 The associated video which was attached with this submission details quite a bit of my codebase however there are a number of scripts in this submission which were not recorded due to the limited timeframe of the video; I hope they are relatively easy to understand.
 
+I apologise in advance for the abundance of Free Assets; I'm not a modeller/animator so I used a number of these assets from the Unity Store in my project. If you're simply interested in the scripts, please navigate to Assets -> Scripts.
+
 The following are external scripts (i.e. I didn't make them):
 
 - PlayerFlightControl.cs
