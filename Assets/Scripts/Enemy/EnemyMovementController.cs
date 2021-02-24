@@ -138,7 +138,7 @@ public class EnemyMovementController : MonoBehaviour
 
         anim.SetFloat("Speed", 1f, 0f, Time.deltaTime);
         anim.SetFloat("wOffset", Random.Range(0, 1));
-        float agentSpeed = Random.Range(0.8f, 1);
+        float agentSpeed = Random.Range(0.9f, 1);
         anim.SetFloat("speedMultiplyer", agentSpeed);
         agent.speed *= agentSpeed;
 

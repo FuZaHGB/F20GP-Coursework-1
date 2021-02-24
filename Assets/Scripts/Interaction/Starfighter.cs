@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Movement;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +24,13 @@ internal class Starfighter : CollisionTrigger
             starfighter.GetComponent<PlayerFlightControl>().enabled = true;
             starfighter.GetComponent<Rigidbody>().useGravity = false;
 
-            player.GetComponent<Renderer>().enabled = false;
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<Animator>().enabled = false;
+            Renderer[] renders = player.GetComponentsInChildren<Renderer>();
+            foreach (Renderer render in renders)
+            {
+                render.enabled = false;
+            }
         }
     }
 }

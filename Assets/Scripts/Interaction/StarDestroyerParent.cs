@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StarDestroyerParent : MonoBehaviour
 {
     public GameObject generator1;
     public GameObject generator2;
+    public bool isDestroyed;
     Animator anim;
 
     void Start()
@@ -19,6 +22,7 @@ public class StarDestroyerParent : MonoBehaviour
         if (generator1.GetComponent<StarDestroyerGenerator>().isDestroyed && generator2.GetComponent<StarDestroyerGenerator>().isDestroyed)
         {
             anim.SetBool("isDestroyed", true);
+            isDestroyed = true;
         }
     }
 }
